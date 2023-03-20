@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Book Store</title>
+    </head>
+    <body>
+        <h1>Book Store</h1>
+        <input type="text" id="search-products" placeholder="Search...">
+        <label>
+            <input type="checkbox" id="available-products"> Available Products
+        </label>
+        <select id="sort">
+            <option value="byEdited">by edited</option>
+            <option value="byCreated">by created</option>
+        </select>
+        <div id="products"></div>
+        <form id="add-product-form">
+            <input type="text" name="productTitle" placeholder="product title...">
+            <input type="text" name="productPrice" placeholder="product price...">
+            <button>Add Product</button>
+            
+        </form>
+
+        <script src="scripts/moment.js"></script>
+        <script src="scripts/jalali-moment.js"></script>
+        <script src="scripts/uuid.js"></script>
+        <script src="scripts/functions.js"></script>
+        <script src='scripts/script.js'></script>
+    </body>
+</html>
