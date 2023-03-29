@@ -1,0 +1,30 @@
+:root {
+    --dark: #171717;
+    --gray: #444;
+    --red: #Da0037;
+    --light: #ededed
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--dark);
+    color: var(--light);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Iosevka web", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--red);
+    height: 5rem;
+}
