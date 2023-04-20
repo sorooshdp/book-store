@@ -1,0 +1,129 @@
+@import "./variables";
+@import "./resets";
+
+.nav-bar {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    top: -0.85rem;
+    align-items: center;
+    justify-content: space-between;
+    background: $green;
+    height: 8rem;
+
+    a{
+        color: $light;
+        font-weight: 500;
+        font-family: $mainFont;
+        font-size: 1.5rem;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    h2{
+        font-style: italic;
+    }
+}
+
+main {
+    position: absolute;
+    ;
+    z-index: 2;
+    background-color: $dark;
+    width: 100%;
+    height: 100vw;
+    border-top-right-radius: $mainRadius;
+    border-top-left-radius: $mainRadius;
+    margin-top: 6rem;
+
+    .inputs {
+        display: flex;
+        margin-top: 2.5rem;
+        align-items: center;
+        justify-content: space-around;
+
+        input {
+            margin: 0.5rem;
+            outline: none;
+            border: none;
+            color: $light;
+            background: $gray;
+            font-size: 1.1rem;
+            font-family: $mainFont;
+            height: 4rem;
+            width: 35%;
+            border-radius: $mainRadius;
+            padding-left: 1rem;
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                -webkit-text-fill-color: $light !important;
+                transition: background-color 9999s ease-in-out 0s;
+            }
+        }
+
+        button {
+            appearance: button;
+            background-color: $green;
+            background-image: none;
+            border: 1px solid $gray;
+            height: 4rem;
+            width: 20%;
+            border-radius: $mainRadius;
+            color: $light;
+            cursor: pointer;
+            display: inline-block;
+            font-family: $mainFont;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 20px;
+            overflow: visible;
+            padding: 12px 40px;
+            text-align: center;
+            text-transform: none;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            white-space: nowrap;
+            transition: all 0.5s;
+            text-transform: uppercase;
+
+            &:focus {
+                text-decoration: none;
+            }
+
+            &:hover {
+                text-decoration: none;
+                transform: translate(-5px, -5px);
+                box-shadow: $light 4px 4px 0 0, $dark 4px 4px 0 1px;
+            }
+
+            &:active {
+                box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+                outline: 0;
+            }
+
+            &:not([disabled]):active {
+                box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+            }
+        }
+    }
+
+    .span-container{
+        width: 30%;
+        margin: 2rem auto 0 auto;
+        
+        #last-edit{
+            margin: 0 1rem 0 8rem;
+            text-align: center;
+            color: $light;
+        }
+    }
+}
