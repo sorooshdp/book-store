@@ -68,46 +68,56 @@ const renderProducts = (products, filters) => {
 }
 
 const createProductDOM = (product) => {
+    const productContainer = document.createElement('div')
     const productEl = document.createElement('div')
     const divElement = document.createElement('div')
+    const pContainer = document.createElement('div')
+    const aContainer = document.createElement('div')
+    const inputContainer = document.createElement('div')
+    const btnContainer = document.createElement('div')
     const checkbox = document.createElement('input')
     const productItem = document.createElement('a')
     const removeButton = document.createElement('button')
     const productPrice = document.createElement('p')
 
-    divElement.setAttribute('class','btns-container')
-    productEl.setAttribute('class','book-container')
+    divElement.setAttribute('class', 'btns-container')
+    productEl.setAttribute('class', 'book-container')
 
-    productItem.setAttribute('class','book-link')
+    productItem.setAttribute('class', 'book-link')
     productItem.textContent = product.title
     productItem.setAttribute('href', `./edit-product.html#${product.id}`)
-    productEl.appendChild(productItem)
+    pContainer.appendChild(productItem)
+    productEl.appendChild(pContainer)
 
-    productPrice.setAttribute('class','book-price')
+    productPrice.setAttribute('class', 'book-price')
     productPrice.textContent = product.price
-    productEl.appendChild(productPrice)
+    aContainer.appendChild(productPrice)
+    productEl.appendChild(aContainer)
 
     checkbox.setAttribute('type', 'checkbox')
     checkbox.checked = !product.exist
-    divElement.appendChild(checkbox)
+    inputContainer.appendChild(checkbox)
+    productEl.appendChild(inputContainer)
     checkbox.addEventListener('change', () => {
         toggleProduct(product.id)
         saveProducts(products)
         renderProducts(products, filters)
     })
 
-    removeButton.setAttribute('class','remove-btn')
+    removeButton.setAttribute('class', 'remove-btn')
     removeButton.textContent = 'Remove'
-    divElement.appendChild(removeButton)
+    btnContainer.appendChild(removeButton)
+    divElement.appendChild(btnContainer)
     removeButton.addEventListener('click', () => {
         removeProduct(product.id)
         saveProducts(products)
         renderProducts(products, filters)
     })
 
-    productEl.appendChild(divElement);
-
-    return productEl
+    productContainer.setAttribute('class', 'product-container')
+    productContainer.appendChild(productEl)
+    productContainer.appendChild(divElement);
+    return productContainer
 }
 
 const lastEdit = (timestamp) => {
