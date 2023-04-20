@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="/styles/styles.css">
+	<link rel="stylesheet" href="/css/styles.css">
 	<link href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css" rel="stylesheet" />
 	<title>Book Store</title>
 </head>
@@ -19,44 +19,50 @@
 				<option value="byCreated">by created</option>
 			</select>
 
-			<div class="search-box">
+			<div class="search-icon">
 				<input type="text" id="search-products" placeholder="Search...">
-				<a id="search-icon" href="#">
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</a>
+				<i class="fa-solid fa-magnifying-glass"></i>
 			</div>
 		</div>
 	</nav>
 
-	<div class="add-product">
-		<div class="add-product-container">
-			<form id="add-product-form">
+	<main>
+		<div class="add-product">
+			<div class="add-product-container">
 				<div class="inputs">
-					<input type="text" name="productTitle" placeholder="Book title...">
-					<input type="text" name="productPrice" placeholder="Book price...">
+					<form action="" id="add-product-form">
+						<input type="text" name="productTitle" placeholder="Book title..." autocomplete="none">
+						<input type="text" name="productPrice" placeholder="Book price..." autocomplete="none">
+						<button class="button">Add Book</button>
+					</form>
 				</div>
-
-				<div class="form-filters">
+				<hr>
+				<div class="headers">
+					<div class="book-name">
+						Name
+					</div>
+					<div class="book-price">
+						Price
+					</div>
+					<div class="isAvailable">
+						Available
+					</div>
+				</div>
+				<div class="project-container">
+					<div id="products"></div>
+				</div>
+				<!-- <div class="form-filters">
 					<label>
 						<div class="checkbox-wrapper">
 							<input type="checkbox" id="available-products" class="sc-gJwTLC ikxBAC"> Available Books
 							<label for="available-products" class="toggle"><span></span></label>
 						</div>
 					</label>
-					<button class="button">Add Book</button>
-				</div>
-			</form>
+				</div> -->
+			</div>
 		</div>
-	</div>
 
-	<div class="project-container">
-		<ul class="list">
-			<li>name</li>
-			<li>price</li>
-			<li>available</li>
-		</ul>
-		<div id="products"></div>
-	</div>
+	</main>
 
 	<script src="scripts/moment.js"></script>
 	<script src="scripts/jalali-moment.js"></script>

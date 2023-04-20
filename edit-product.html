@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <body>
-        <h2>Edit Product</h2>
-        <a href="index.html">Home</a>
-        <input type="text" id="product-title" placeholder="Product Title">
-        <input type="text" id="product-price" placeholder="Product Price">
-        <span id="last-edit"></span>
-        <button id="remove-product">Remove</button>
 
-        <script src="scripts/moment.js"></script>
-        <script src="jalali-moment"></script>
-        <script src="scripts/functions.js"></script>
-        <script src="scripts/edit-product.js"></script>
-    </body>
+<head>
+    <link href="https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/edit.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <h2>Edit Product</h2>
+    </nav>
+
+    <main>
+    <section class="inputs">
+        <input type="text" id="product-title" value="bookName" placeholder="Product Title">
+        <input type="text" id="product-price" value="bookPrice" placeholder="Product Price">
+        <button id="remove-product">Remove</button>
+    </section>
+
+    <section class="span-container">
+        <span id="last-edit"></span>
+    </section>
+    </main>
+ 
+    <script src="scripts/moment.js"></script>
+    <script src="jalali-moment"></script>
+    <script src="scripts/functions.js"></script>
+    <script src="scripts/edit-product.js"></script>
+</body>
+
 </html>
