@@ -1,0 +1,109 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--dark);
+  color: var(--light);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+.nav-bar {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  padding: 0 2rem;
+  top: -0.85rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #06a443;
+  height: 8rem; }
+  .nav-bar a {
+    color: #ededed;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.5rem; }
+    .nav-bar a:hover {
+      text-decoration: none; }
+  .nav-bar h2 {
+    font-style: italic; }
+
+main {
+  position: absolute;
+  z-index: 2;
+  background-color: #000000;
+  width: 100%;
+  height: 100vw;
+  border-top-right-radius: 1.25rem;
+  border-top-left-radius: 1.25rem;
+  margin-top: 6rem; }
+  main .inputs {
+    display: flex;
+    margin-top: 2.5rem;
+    align-items: center;
+    justify-content: space-around; }
+    main .inputs input {
+      margin: 0.5rem;
+      outline: none;
+      border: none;
+      color: #ededed;
+      background: #0b2728;
+      font-size: 1.1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      height: 4rem;
+      width: 35%;
+      border-radius: 1.25rem;
+      padding-left: 1rem; }
+      main .inputs input:-webkit-autofill, main .inputs input:-webkit-autofill:hover, main .inputs input:-webkit-autofill:focus, main .inputs input:-webkit-autofill:active {
+        -webkit-text-fill-color: #ededed !important;
+        transition: background-color 9999s ease-in-out 0s; }
+    main .inputs button {
+      appearance: button;
+      background-color: #06a443;
+      background-image: none;
+      border: 1px solid #0b2728;
+      height: 4rem;
+      width: 20%;
+      border-radius: 1.25rem;
+      color: #ededed;
+      cursor: pointer;
+      display: inline-block;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 20px;
+      overflow: visible;
+      padding: 12px 40px;
+      text-align: center;
+      text-transform: none;
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      transition: all 0.5s;
+      text-transform: uppercase; }
+      main .inputs button:focus {
+        text-decoration: none; }
+      main .inputs button:hover {
+        text-decoration: none;
+        transform: translate(-5px, -5px);
+        box-shadow: #ededed 4px 4px 0 0, #000000 4px 4px 0 1px; }
+      main .inputs button:active {
+        box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+        outline: 0; }
+      main .inputs button:not([disabled]):active {
+        box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px; }
+  main .span-container {
+    width: 30%;
+    margin: 2rem auto 0 auto; }
+    main .span-container #last-edit {
+      margin: 0 1rem 0 8rem;
+      text-align: center;
+      color: #ededed; }
